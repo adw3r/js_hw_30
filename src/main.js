@@ -57,13 +57,12 @@ function openModal() {
     modal.classList.remove('is-hidden')
     modal.setAttribute('aria-hidden', 'false')
 }
+openBtn.addEventListener('click', openModal)
 
 function closeModal() {
     modal.classList.add('is-hidden')
     modal.setAttribute('aria-hidden', 'true')
 }
-
-openBtn.addEventListener('click', openModal)
 modal.addEventListener('click', (event) => {
     const target = event.target
     if (target && target.hasAttribute('data-close')) {
